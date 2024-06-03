@@ -1,0 +1,33 @@
+import turtle
+
+def draw_flower():
+    window = turtle.Screen()
+    window.bgcolor("white")
+
+    # Create a turtle named "flower"
+    flower = turtle.Turtle()
+    flower.shape("turtle")
+    flower.speed(10)
+    flower.color("red", "yellow")
+
+    # Draw flower
+    flower.begin_fill()
+    for _ in range(36):
+        flower.forward(100)
+        flower.left(50)
+        flower.forward(100)
+        flower.right(100)
+        flower.forward(100)
+        flower.left(50)
+        flower.forward(100)
+        flower.right(110)
+    flower.end_fill()
+
+    # Draw stem
+    flower.color("green")
+    flower.right(90)
+    flower.forward(250)
+
+    window.exitonclick()
+
+draw_flower()
